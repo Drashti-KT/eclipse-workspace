@@ -1,0 +1,47 @@
+package oopsconcept;
+
+import java.util.*;
+
+public class JavaCollectionFramework {
+
+	public static void main(String[] args) {
+		 // Using List (ArrayList)
+        List<String> fruits = new ArrayList<>();
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Orange");
+        fruits.add("Banana"); // Duplicates are allowed in List
+
+        System.out.println("Fruits List: " + fruits);
+
+        // Using Set (HashSet)
+        Set<String> uniqueFruits = new HashSet<>(fruits);
+        System.out.println("Unique Fruits Set: " + uniqueFruits); // Duplicates are removed
+
+        // Using Map (HashMap)
+        Map<String, Integer> fruitPrices = new HashMap<>();
+        fruitPrices.put("Apple", 100);
+        fruitPrices.put("Banana", 50);
+        fruitPrices.put("Orange", 80);
+
+        System.out.println("Fruit Prices: " + fruitPrices);
+
+        // Accessing values from the Map
+        System.out.println("Price of Apple: " + fruitPrices.get("Apple"));
+
+        // Using Queue (LinkedList)
+        Queue<String> fruitQueue = new LinkedList<>();
+        fruitQueue.add("Apple");
+        fruitQueue.add("Banana");
+        fruitQueue.add("Orange");
+
+        System.out.println("Fruit Queue: " + fruitQueue);
+
+        // Polling from the Queue
+        System.out.println("Polled from Queue: " + fruitQueue.poll()); // Removes and returns the head of the queue
+        System.out.println("Fruit Queue after polling: " + fruitQueue);
+    }
+
+	}
+
+}
